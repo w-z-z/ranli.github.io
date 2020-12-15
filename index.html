@@ -2,7 +2,7 @@
  * @Description: Description
  * @Author: ranli
  * @Date: 2020-12-15 15:22:48
- * @LastEditTime: 2020-12-15 15:52:20
+ * @LastEditTime: 2020-12-15 17:14:48
  * @LastEditors: ranli
 -->
 
@@ -16,7 +16,10 @@
 </head>
 
 <body>
-
+  <button onClick='eee()'>eee</button>
+  <button onClick='fff()'>fff</button>
+  <button onClick='ggg()'>ggg</button>
+  <button onClick='hhh()'>hhh</button>
   <div>
     <p>大大大大大大 房贷首付啥的范德萨发士</p>
     <p>大夫代付第三方</p>
@@ -39,6 +42,27 @@
     };
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+    defaultAnalytics.logEvent('analytics-index');
+
+    function eee() {
+      defaultAnalytics.logEvent('eee');
+      console.log("eee");
+    }
+
+    function fff() {
+      defaultAnalytics.logEvent('fff');
+      console.log("fff");
+    }
+
+    function ggg() {
+      defaultAnalytics.logEvent('ggg');
+      console.log("ggg");
+    }
+
+    function hhh() {
+      defaultAnalytics.logEvent('hhh');
+      console.log("hhh");
+    }
   </script>
 </body>
 
