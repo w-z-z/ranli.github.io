@@ -31,41 +31,9 @@
   <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+  <script src="./js/index.js"></script>
   <script>
-    var firebaseConfig = {
-      apiKey: "AIzaSyDs4XhB9GAEO8f4IepyZ1sWkEIvKSBKXUI",
-      authDomain: "test-5e6ad.firebaseapp.com",
-      projectId: "test-5e6ad",
-      storageBucket: "test-5e6ad.appspot.com",
-      messagingSenderId: "189669951181",
-      appId: "1:189669951181:web:2363df5bace628beab0b84",
-      measurementId: "G-SD09GS53J2"
-    };
-    // Set the tenant ID on Auth instance.
-    firebase.auth().tenantId = 'Reading';
-    firebase.initializeApp(firebaseConfig);
-    const defaultAnalytics = firebase.analytics()
-    defaultAnalytics.logEvent('analytics-test');
 
-    function aaa() {
-      defaultAnalytics.logEvent('aaa');
-      console.log("aaa");
-    }
-
-    function bbb() {
-      defaultAnalytics.logEvent('bbb');
-      console.log("bbb");
-    }
-
-    function ccc() {
-      firebase.analytics().logEvent('ccc');
-      console.log("ccc");
-    }
-
-    function ddd() {
-      defaultAnalytics.logEvent('ddd');
-      console.log("ddd");
-    }
   </script>
 </body>
 
