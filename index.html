@@ -2,7 +2,7 @@
  * @Description: Description
  * @Author: ranli
  * @Date: 2020-12-15 15:22:48
- * @LastEditTime: 2020-12-15 17:19:06
+ * @LastEditTime: 2020-12-15 17:27:11
  * @LastEditors: ranli
 -->
 
@@ -30,6 +30,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script> -->
   <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
   <script>
     var firebaseConfig = {
       apiKey: "AIzaSyDs4XhB9GAEO8f4IepyZ1sWkEIvKSBKXUI",
@@ -40,6 +41,7 @@
       appId: "1:189669951181:web:2363df5bace628beab0b84",
       measurementId: "G-SD09GS53J2"
     };
+    firebase.auth().tenantId = 'Comments';
     firebase.initializeApp(firebaseConfig);
     const defaultAnalytics = firebase.analytics()
     defaultAnalytics.logEvent('analytics-index');
