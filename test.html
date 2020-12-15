@@ -2,7 +2,7 @@
  * @Description: Description
  * @Author: ranli
  * @Date: 2020-12-15 15:22:48
- * @LastEditTime: 2020-12-15 17:13:39
+ * @LastEditTime: 2020-12-15 17:16:31
  * @LastEditors: ranli
 -->
 
@@ -40,7 +40,7 @@
       appId: "1:189669951181:web:2363df5bace628beab0b84",
       measurementId: "G-SD09GS53J2"
     };
-    firebase.initializeApp(firebaseConfig);
+    const defaultAnalytics = firebase.initializeApp(firebaseConfig);
     defaultAnalytics.logEvent('analytics-test');
 
     function aaa() {

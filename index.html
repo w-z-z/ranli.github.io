@@ -2,7 +2,7 @@
  * @Description: Description
  * @Author: ranli
  * @Date: 2020-12-15 15:22:48
- * @LastEditTime: 2020-12-15 17:14:48
+ * @LastEditTime: 2020-12-15 17:16:38
  * @LastEditors: ranli
 -->
 
@@ -41,7 +41,7 @@
       measurementId: "G-SD09GS53J2"
     };
     firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
+    const defaultAnalytics = firebase.analytics();
     defaultAnalytics.logEvent('analytics-index');
 
     function eee() {
