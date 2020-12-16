@@ -1,0 +1,74 @@
+<!--
+ * @Description: Description
+ * @Author: ranli
+ * @Date: 2020-12-15 15:22:48
+ * @LastEditTime: 2020-12-16 10:59:44
+ * @LastEditors: ranli
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+</head>
+
+<body>
+
+  <div>
+    <p>product</p>
+    <a href="./index.html">index.html</a>
+    <button onClick='add_to_cart_my()'>加入购物车</button>
+    <button onClick='payOut()'>支付成功</button>
+    <button onClick='spend_virtual_currency()'>虚拟金币</button>
+  </div>
+  <!-- Add the entire Firebase JavaScript SDK
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+  <script src="./js/index.js"></script>
+  <script>
+    firebase.auth().tenantId = 'Product';
+    const productInfo = {
+      proId: 4546545,
+      proName: "xxxxx减肥药",
+      proDesc: "月减肥20斤",
+      proType: "3",
+      price: 50,
+    }
+    const orderInfo = {
+      orderId: 2322312,
+      orderNum: 6456464164641,
+      orderTime: 55454,
+      proNum: 1,
+      amount: 50,
+      productInfo: productInfo
+    }
+    defaultAnalytics.logEvent('Product-see', productInfo);
+
+    function add_to_cart_my() {
+      defaultAnalytics.logEvent('add_to_cart_my', productInfo);
+      console.log("add_to_cart_my");
+    }
+
+    function payOut() {
+      defaultAnalytics.logEvent('pay_out', orderInfo);
+      console.log("pay_out");
+    }
+
+    function spend_virtual_currency() {
+      defaultAnalytics.logEvent('pay_out', {
+        item_name: "555",
+        virtual_currency_name: "Q币",
+        value: "20"
+      });
+      console.log("pay_out");
+    }
+  </script>
+</body>
+
+</html>
