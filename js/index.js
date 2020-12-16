@@ -1,8 +1,8 @@
 /*
  * @Description: Description
  * @Author: ranli
- * @Date: 2020-12-15 17:40:52
- * @LastEditTime: 2020-12-16 11:03:42
+ * @Date: 2020-12-16 11:14:24
+ * @LastEditTime: 2020-12-16 11:14:38
  * @LastEditors: ranli
  */
 var firebaseConfig = {
@@ -16,8 +16,6 @@ var firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-
-
  var defaultAnalytics = firebase.analytics()
  defaultAnalytics.setUserProperties({
   favorite_food : 'apples',
