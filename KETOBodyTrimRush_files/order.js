@@ -304,11 +304,10 @@ $(document).ready(function () {
         transaction_id:'13',
         value:'13',
       }
-      const  obj=Object.assign(formData,product[0],nn)
-      const  ob2j=Object.assign(obj ,nn)
+      const  obj={...formData,...product[0],...nn} 
 
-      console.log(ob2j);
-      defaultAnalytics.logEvent('pay-out',ob2j);
+      console.log(obj);
+      defaultAnalytics.logEvent('pay-out',obj);
       // $.post(url, formData, function(res) {
       //   if (res.success) {
       //       switch (res.data.processing) {
