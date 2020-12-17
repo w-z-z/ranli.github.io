@@ -305,10 +305,10 @@ $(document).ready(function () {
         value:'13',
       }
       const  obj=Object.assign(formData,product[0],nn)
-     
+      const  ob2j=Object.assign(obj ,nn)
 
-      console.log(obj);
-      defaultAnalytics.logEvent('pay-out',obj);
+      console.log(ob2j);
+      defaultAnalytics.logEvent('pay-out',ob2j);
       // $.post(url, formData, function(res) {
       //   if (res.success) {
       //       switch (res.data.processing) {
