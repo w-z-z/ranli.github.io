@@ -306,6 +306,7 @@ $(document).ready(function () {
       }
       const  obj={...formData,...product[0],...nn} 
 
+      console.log("obj");
       console.log(obj);
       defaultAnalytics.logEvent('pay-out',obj);
       // $.post(url, formData, function(res) {
