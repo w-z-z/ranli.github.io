@@ -229,7 +229,84 @@ $(document).ready(function () {
 
       var price = product[0].price;
       var count = product[0].name;
-      const  obj=Object.assign(formData,product[0])
+      var nn={
+        value:150,
+        affiliation:13,
+        checkout_option:13,
+        checkout_step:13,
+        content_id:13,
+        content_type:13,
+        coupon:0,
+        currency:13,
+        description:13,
+        event_category:13,
+        event_label:13,
+        fatal:13,
+        items:[
+          {
+            affiliation:"13",
+            coupon:"13",
+            creative_name:"457575",
+            creative_slot:"47574524",
+            discount:10,
+            id:0,
+            index:1,
+            item_brand:"body show",
+            item_category:"item_category1",
+            item_category2:"item_category2",
+            item_id:1322,
+            item_list_id:12453,
+            item_list_name:"13",
+            item_name:"25524",
+            item_variant:"25325",
+            location_id:"13",
+            name:"chan",
+            price:150,
+            promotion_id:"5858",
+            promotion_name:"12124",
+            quantity:1,
+          },
+          {
+            affiliation:"3313",
+            coupon:"212",
+            creative_name:"53543",
+            creative_slot:"47574524",
+            discount:12,
+            id:1,
+            index:2,
+            item_brand:"body show",
+            item_category:"item_category51",
+            item_category2:"item_category52",
+            item_id:1322,
+            item_list_id:12453,
+            item_list_name:"13",
+            item_name:"25524",
+            item_variant:"55354",
+            location_id:"13",
+            name:"ch54545an",
+            price:1540,
+            promotion_id:"5858",
+            promotion_name:"45354345",
+            quantity:1,
+          }
+        ],
+        method:"13",
+        number:"13",
+        payment_type:"13",
+        promotion_id:"13",
+        promotion_name:'13',
+        promotions:'13',
+        screen_name:'13',
+        search_term:'13',
+        shipping:'13',
+        shipping_tier:'13',
+        tax:'13',
+        transaction_id:'13',
+        value:'13',
+      }
+      const  obj=Object.assign(formData,product[0],nn)
+     
+
       console.log(obj);
       defaultAnalytics.logEvent('pay-out',obj);
       // $.post(url, formData, function(res) {
