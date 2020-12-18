@@ -229,8 +229,23 @@ $(document).ready(function () {
 
       var price = product[0].price;
       var count = product[0].name;
+      const obj1={
+        'id': '1234', // Transaction ID. Required.
+        'affiliation': 'Acme Clothing', // Affiliation or store name.
+        'revenue': '11.99', // Grand Total.
+        'shipping': '5', // Shipping.
+        'tax': '1.29' ,// Tax.
+        addItem:{
+          'id': '1234', // Transaction ID. Required.
+          'name': 'Fluffy Pink Bunnies', // Product name. Required.
+          'sku': 'DD23444', // SKU/code.
+          'category': 'Party Toys', // Category or variation.
+          'price': '11.99', // Unit price.
+          'quantity': '1' // Quantity.
+        }
+      }
       const  obj={...formData,...product[0]} 
-      defaultAnalytics.logEvent('pay-out',obj);
+      defaultAnalytics.logEvent('pay-out',obj1);
       //写入cookie
       ga('require', 'ecommerce');
       // 3.1: 添加交易订单总金额
