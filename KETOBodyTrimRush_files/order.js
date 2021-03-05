@@ -168,37 +168,36 @@ $(document).ready(function () {
     "Invalid Expiration Date!"
   );
 
-  $(".product1").bind("click", function () {
-    $(".product2").removeClass("active");
-    $(".product3").removeClass("active");
-    $(this).addClass("active");
-    $(".package-info__btn").html("Select Package");
-    $(".product1 .package-info__btn").html("Selected!");
-    OrderType = products[0].sku;
+  // $(".product1").bind("click", function () {
+  //   $(".product2").removeClass("active");
+  //   $(".product3").removeClass("active");
+  //   $(this).addClass("active");
+  //   $(".package-info__btn").html("Select Package");
+  //   $(".product1 .package-info__btn").html("Selected!");
+  //   OrderType = products[0].sku;
 
-  });
+  // });
 
-  $(".product2").bind("click", function () {
-    $(".product1").removeClass("active");
-    $(".product3").removeClass("active");
-    $(this).addClass("active");
-    $(".package-info__btn").html("Select Package");
-    $(".product2 .package-info__btn").html("Selected!");
-    OrderType = products[1].sku;
-  });
+  // $(".product2").bind("click", function () {
+  //   $(".product1").removeClass("active");
+  //   $(".product3").removeClass("active");
+  //   $(this).addClass("active");
+  //   $(".package-info__btn").html("Select Package");
+  //   $(".product2 .package-info__btn").html("Selected!");
+  //   OrderType = products[1].sku;
+  // });
 
-  $(".product3").bind("click", function () {
-    $(".product2").removeClass("active");
-    $(".product1").removeClass("active");
-    $(this).addClass("active");
-    $(".package-info__btn").html("Select Package");
-    $(".product3 .package-info__btn").html("Selected!");
-    OrderType = products[2].sku;
-  });
+  // $(".product3").bind("click", function () {
+  //   $(".product2").removeClass("active");
+  //   $(".product1").removeClass("active");
+  //   $(this).addClass("active");
+  //   $(".package-info__btn").html("Select Package");
+  //   $(".product3 .package-info__btn").html("Selected!");
+  //   OrderType = products[2].sku;
+  // });
 
   var validator = $("#checkout").validate({
     submitHandler: function () {
-
       $(".popup-loading-wrapper").show();
 
       var cardNumber = $('#checkout').find('input[name="cardNumber"]').val();
