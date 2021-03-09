@@ -452,6 +452,7 @@
         $(document).ready(function () {
 
             defaultAnalytics.logEvent('see-order-page');
+            
             const item_jeggings = {
                 item_id: 'SKU_123',
                 item_name: 'jeggings',
@@ -460,7 +461,6 @@
                 item_brand: 'Google',
                 price: 9.99
             };
-            let pro = item_jeggings;
             // A pair of boots
             const item_boots = {
                 item_id: 'SKU_456',
@@ -486,7 +486,7 @@
                 item_list_name: 'Related products',
                 items: [item_jeggings, item_boots, item_socks]
             };
-
+            let pro = item_jeggings;
             // Log event
             firebase.analytics().logEvent(firebase.analytics.EventName.VIEW_ITEM_LIST, params1);
             $(".product1").bind("click", function () {
@@ -540,7 +540,7 @@
                 };
                 pro = item_socks
                 // Log event
-                firebase.analytics().logEvent(firebase.analytics.EventName.VIEW_ITEM, params3);
+                firebase.analytics().logEvent(firebase.analytics.EventName.SELECT_ITEM, params3);
             });
             
             $("#testBtn").bind("click", function () {
@@ -568,19 +568,19 @@
 
                 // Log event
                 firebase.analytics().logEvent(firebase.analytics.EventName.PURCHASE, params10);
-                ga('require', 'ecommerce');
-                // // 3.1: 添加交易订单总金额
-                ga('ecommerce:addTransaction', params10);
-                // // 3.2： 添加交易订单产品
-                // ga('ecommerce:addItem', {
-                //     'id': 'proID00' + num, // Transaction ID. Required.
-                //     'name': 'Fluffy Pink Bunnies', // Product name. Required.
-                //     'sku': 'DD23444', // SKU/code.
-                //     'category': 'Party Toys', // Category or variation.
-                //     'price': '11.99', // Unit price.
-                //     'quantity': '1' // Quantity.
-                // });
-                ga('ecommerce:send');
+//                 ga('require', 'ecommerce');
+//                 // // 3.1: 添加交易订单总金额
+//                 ga('ecommerce:addTransaction', params10);
+//                 // // 3.2： 添加交易订单产品
+//                 // ga('ecommerce:addItem', {
+//                 //     'id': 'proID00' + num, // Transaction ID. Required.
+//                 //     'name': 'Fluffy Pink Bunnies', // Product name. Required.
+//                 //     'sku': 'DD23444', // SKU/code.
+//                 //     'category': 'Party Toys', // Category or variation.
+//                 //     'price': '11.99', // Unit price.
+//                 //     'quantity': '1' // Quantity.
+//                 // });
+//                 ga('ecommerce:send');
                 console.log("结束");
             });
         })
