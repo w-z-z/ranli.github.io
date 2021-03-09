@@ -334,7 +334,7 @@
                                         <br>
                                         <br>
                                         <br>
-                                        <div onclick='submitSomePro()' class="send-btn"><span>RUSH MY ORDER!</span>
+                                        <div id='testBtn'   class="send-btn"><span>RUSH MY ORDER!</span>
                                         </div>
                                     </div>
                                 </form>
@@ -542,9 +542,9 @@
                 // Log event
                 firebase.analytics().logEvent(firebase.analytics.EventName.VIEW_ITEM, params3);
             });
-
-            function submitSomePro() {
-                console.log("开始");
+            
+            $("#testBtn").bind("click", function () {
+                   console.log("开始");
                 const params7 = {
                     currency: 'USD',
                     value: 14.98, // Total Revenue
@@ -584,7 +584,7 @@
 
                 num++
                 console.log("结束");
-            }
+            });
         })
     </script>
 </body>
